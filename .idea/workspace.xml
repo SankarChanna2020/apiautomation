@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a874134a-de1d-46bc-84b8-6456664662c9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/requestBody/userManagementAPIs/createUserRequestBody.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/requestBody/userManagementAPIs/updateUserRequestBody.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/APIDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/apitesting/dataproviders/UserManagementDp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/FileUtils.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2dH31XFQuQBGTXLQzBwoMaoxI1z" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.APIDemo.deleteMethodUser.executor": "Run",
+    "TestNG.APIDemo.executor": "Run",
+    "TestNG.APIDemo.getMethodUserDetails.executor": "Run",
+    "TestNG.APIDemo.postMethodCreateUserAPI.executor": "Run",
+    "TestNG.APIDemo.putMethodUpdateUser.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "C:/Users/91830/IdeaProjects/apiautomation/src/main/java/org/apitests/Main.java",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.APIDemo.getMethodUserDetails">
+    <configuration name="APIDemo" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="apiautomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.apitests" />
+      <option name="MAIN_CLASS_NAME" value="APIDemo" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="APIDemo.deleteMethodUser" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="apiautomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.apitests" />
+      <option name="MAIN_CLASS_NAME" value="APIDemo" />
+      <option name="METHOD_NAME" value="deleteMethodUser" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="APIDemo.getMethodUserDetails" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="apiautomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.apitests" />
+      <option name="MAIN_CLASS_NAME" value="APIDemo" />
+      <option name="METHOD_NAME" value="getMethodUserDetails" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="APIDemo.postMethodCreateUserAPI" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="apiautomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.apitests" />
+      <option name="MAIN_CLASS_NAME" value="APIDemo" />
+      <option name="METHOD_NAME" value="postMethodCreateUserAPI" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="APIDemo.putMethodUpdateUser" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="apiautomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.apitests" />
+      <option name="MAIN_CLASS_NAME" value="APIDemo" />
+      <option name="METHOD_NAME" value="putMethodUpdateUser" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.APIDemo.getMethodUserDetails" />
+        <item itemvalue="TestNG.APIDemo.deleteMethodUser" />
+        <item itemvalue="TestNG.APIDemo.postMethodCreateUserAPI" />
+        <item itemvalue="TestNG.APIDemo" />
+        <item itemvalue="TestNG.APIDemo.putMethodUpdateUser" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-1.8.0_402-corretto-1.8.0_402-4caba194b151-ae57be32" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a874134a-de1d-46bc-84b8-6456664662c9" name="Changes" comment="" />
+      <created>1709650964227</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709650964227</updated>
+    </task>
+    <servers />
+  </component>
+</project>
