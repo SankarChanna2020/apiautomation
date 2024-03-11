@@ -33,9 +33,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2dH31XFQuQBGTXLQzBwoMaoxI1z" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -53,7 +53,7 @@
     "TestNG.APIDemo.getMethodUserDetails.executor": "Run",
     "TestNG.APIDemo.postMethodCreateUserAPI.executor": "Run",
     "TestNG.APIDemo.putMethodUpdateUser.executor": "Run",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "sankar__march2024",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "C:/Users/91830/IdeaProjects/apiautomation/src/main/java/org/apitests/Main.java",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
