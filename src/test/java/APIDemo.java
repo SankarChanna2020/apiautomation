@@ -55,6 +55,16 @@ public class APIDemo {
                 .assertThat().statusCode(200);
 
     }
+    @Test
+    public void deleteMethodUser2(){
+
+        given().log().all()
+                .when()
+                .delete("/v2/user/apitester2")
+                .then().log().all()
+                .assertThat().statusCode(200);
+
+    }
 
     public void deleteMethodUser1(){
 
