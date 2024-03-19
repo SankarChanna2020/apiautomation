@@ -1,0 +1,13 @@
+{
+  "apiEndpoints": {
+    "userManagementAPIs": {
+      "endpoint": "https://petstore.swagger.io",
+      "resourcePaths": {
+        "createUserV2": "/v2/user",
+        "getUserDetailsV2": "/v2/user/{username}",
+        "updateUserV2": "/v2/user/{userid}",
+        "deleteUserV2": "/v2/user/{userid}"
+      }
+    }
+  }
+}

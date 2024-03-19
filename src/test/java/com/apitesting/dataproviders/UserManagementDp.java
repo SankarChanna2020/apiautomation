@@ -2,7 +2,7 @@ package com.apitesting.dataproviders;
 
 import com.jayway.jsonpath.JsonPath;
 import org.testng.annotations.DataProvider;
-import utilities.FileUtils;
+import com.apitesting.utilities.FileUtils;
 
 public class UserManagementDp {
 
