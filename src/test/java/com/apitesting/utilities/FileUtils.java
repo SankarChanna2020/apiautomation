@@ -1,4 +1,4 @@
-package utilities;
+package com.apitesting.utilities;
 
 import java.io.*;
 
@@ -8,6 +8,20 @@ public class FileUtils {
     public String readFileAsString(String filePath)  {
 
         String fileName = System.getProperty("user.dir") + filePath;
+        String fileAsString = null;
+
+        try {
+            fileAsString = readConfigFile(fileName);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        return fileAsString;
+    }
+
+    public String getEndpointConfigFileAsString()  {
+
+        String fileName = System.getProperty("user.dir") + "/src/test/java/com/apitesting/config/endpointConfigs.json";
         String fileAsString = null;
 
         try {
