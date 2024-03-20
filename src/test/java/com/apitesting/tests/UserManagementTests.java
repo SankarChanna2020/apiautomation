@@ -29,7 +29,6 @@ public class UserManagementTests {
     public void postMethodCreateUserAPI(String postReqBody) throws IOException {
 
         Response createUserResponse= umClient.createUser(postReqBody);
-        System.out.println(createUserResponse.toString());
 
 
 
@@ -47,14 +46,6 @@ public class UserManagementTests {
     public void getMethodUserDetails(String userName){
 
         Response getUserResponse= umClient.getUserDetails(userName);
-        System.out.println(getUserResponse.toString());
-
-//        given().log().all()
-//                .pathParam("username",userName)
-//                .when()
-//                .get("/v2/user/{username}")
-//                .then().log().all()
-//                .assertThat().statusCode(200);
 
     }
 
