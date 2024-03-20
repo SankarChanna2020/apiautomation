@@ -26,6 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -42,30 +44,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "TestNG.APIDemo.deleteMethodUser.executor": "Run",
-    "TestNG.APIDemo.executor": "Run",
-    "TestNG.APIDemo.getMethodUserDetails.executor": "Run",
-    "TestNG.APIDemo.postMethodCreateUserAPI.executor": "Run",
-    "TestNG.APIDemo.putMethodUpdateUser.executor": "Run",
-    "git-widget-placeholder": "sankar__march2024",
-    "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "C:/Users/91830/IdeaProjects/apiautomation/src/main/java/org/apitests/Main.java",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;TestNG.APIDemo.deleteMethodUser.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.APIDemo.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.APIDemo.getMethodUserDetails.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.APIDemo.postMethodCreateUserAPI.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.APIDemo.putMethodUpdateUser.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserManagementTests.getMethodUserDetails.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserManagementTests.postMethodCreateUserAPI.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;sankar__march2024&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/91830/IdeaProjects/apiautomation/src/main/java/org/apitests/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.apitesting.endpoints.usermanagement" />
+    </key>
   </component>
-  <component name="RunManager" selected="TestNG.APIDemo.getMethodUserDetails">
-    <configuration name="APIDemo" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.UserManagementTests.getMethodUserDetails">
+    <configuration name="UserManagementTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="apiautomation" />
       <extension name="coverage">
         <pattern>
@@ -74,7 +88,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.apitests" />
-      <option name="MAIN_CLASS_NAME" value="APIDemo" />
+      <option name="MAIN_CLASS_NAME" value="com.apitesting.tests.UserManagementTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -82,7 +96,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="APIDemo.deleteMethodUser" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserManagementTests.deleteMethodUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="apiautomation" />
       <extension name="coverage">
         <pattern>
@@ -91,7 +105,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.apitests" />
-      <option name="MAIN_CLASS_NAME" value="APIDemo" />
+      <option name="MAIN_CLASS_NAME" value="com.apitesting.tests.UserManagementTests" />
       <option name="METHOD_NAME" value="deleteMethodUser" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -100,7 +114,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="APIDemo.getMethodUserDetails" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserManagementTests.getMethodUserDetails" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="apiautomation" />
       <extension name="coverage">
         <pattern>
@@ -109,7 +123,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.apitests" />
-      <option name="MAIN_CLASS_NAME" value="APIDemo" />
+      <option name="MAIN_CLASS_NAME" value="com.apitesting.tests.UserManagementTests" />
       <option name="METHOD_NAME" value="getMethodUserDetails" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -118,7 +132,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="APIDemo.postMethodCreateUserAPI" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserManagementTests.postMethodCreateUserAPI" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="apiautomation" />
       <extension name="coverage">
         <pattern>
@@ -127,7 +141,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.apitests" />
-      <option name="MAIN_CLASS_NAME" value="APIDemo" />
+      <option name="MAIN_CLASS_NAME" value="com.apitesting.tests.UserManagementTests" />
       <option name="METHOD_NAME" value="postMethodCreateUserAPI" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -136,7 +150,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="APIDemo.putMethodUpdateUser" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserManagementTests.putMethodUpdateUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="apiautomation" />
       <extension name="coverage">
         <pattern>
@@ -145,7 +159,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.apitests" />
-      <option name="MAIN_CLASS_NAME" value="APIDemo" />
+      <option name="MAIN_CLASS_NAME" value="com.apitesting.tests.UserManagementTests" />
       <option name="METHOD_NAME" value="putMethodUpdateUser" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -156,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.APIDemo.getMethodUserDetails" />
-        <item itemvalue="TestNG.APIDemo.deleteMethodUser" />
-        <item itemvalue="TestNG.APIDemo.postMethodCreateUserAPI" />
-        <item itemvalue="TestNG.APIDemo" />
-        <item itemvalue="TestNG.APIDemo.putMethodUpdateUser" />
+        <item itemvalue="TestNG.UserManagementTests.getMethodUserDetails" />
+        <item itemvalue="TestNG.UserManagementTests.postMethodCreateUserAPI" />
+        <item itemvalue="TestNG.UserManagementTests.deleteMethodUser" />
+        <item itemvalue="TestNG.UserManagementTests" />
+        <item itemvalue="TestNG.UserManagementTests.putMethodUpdateUser" />
       </list>
     </recent_temporary>
   </component>
@@ -180,6 +194,19 @@
       <option name="presentableId" value="Default" />
       <updated>1709650964227</updated>
     </task>
+    <task id="LOCAL-00001" summary="adding one more delete api">
+      <option name="closed" value="true" />
+      <created>1710175275336</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710175275336</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adding one more delete api" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding one more delete api" />
   </component>
 </project>

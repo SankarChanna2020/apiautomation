@@ -2,8 +2,10 @@ package com.apitesting.helpers;
 
 import com.apitesting.apicontract.ApiEndpoint;
 import com.apitesting.apicontract.HttpMethod;
+import com.apitesting.apicontract.Parameter;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.testng.Reporter;
 
 import static io.restassured.RestAssured.given;
 
@@ -16,14 +18,19 @@ public class ApiHelper {
 
     public Response executeRequest(ApiEndpoint apiEndpoint){
 
-//        String endpoint = apiEndpoint.getClass().getSimpleName().replaceAll("Endpoint","");
-
+        String endpointName = apiEndpoint.getClass().getSimpleName().replaceAll("Endpoint","");
         String url = apiEndpoint.url();
         HttpMethod httpMethod = apiEndpoint.httpMethod();
+
+        //calling logging request data method
+        loggingRequestData(apiEndpoint,endpointName,url,httpMethod,apiEndpoint.requestBody());
 
         //API Request method :
         RequestSpecification request = requestSpecification(apiEndpoint);
         Response response = fetchAPIResponse(url,httpMethod,request);
+
+        // calling logging response data method
+        loggingResponseData(endpointName,response);
 
         return response;
     }
@@ -79,9 +86,67 @@ public class ApiHelper {
        return response;
    }
 
+   private void loggingRequestData(ApiEndpoint apiEndpoint,String endpointName,String url,HttpMethod httpMethod,String reqbody){
+
+        //url formatting
+        String urlLogging = String.format("\n" + endpointName +" URL ---> %s %s",httpMethod.toString(),url);
+        Reporter.log(urlLogging,true);
 
 
+        //header formatting
+        if(apiEndpoint.headers() != null){
 
+            String headerLogging = "";
+            for(Parameter p : apiEndpoint.headers()){
+                headerLogging = headerLogging + String.format("%s:%s\n",p.getKey(),p.getValue());
+            }
+
+            String headerMessage = String.format(endpointName + " Header --> \n%s",headerLogging);
+            Reporter.log(headerMessage.substring(0,headerMessage.length()-1),true);
+
+
+        }
+
+        //queryParams  formatting
+       if(apiEndpoint.queryParams() != null){
+
+           String queryParamLogging = "?";
+           for(Parameter p : apiEndpoint.queryParams()){
+               queryParamLogging = queryParamLogging + String.format("%s:%s\n",p.getKey(),p.getValue());
+           }
+
+           String queryParamsMessage = String.format(endpointName + " Query Parameters --> \n%s",queryParamLogging);
+           Reporter.log(queryParamsMessage.substring(0,queryParamsMessage.length()-1),true);
+
+
+       }
+
+        //pathParams formatting
+       if(apiEndpoint.pathParams() != null){
+
+           for(Parameter p : apiEndpoint.pathParams()){
+               String pathParamLogging = String.format("%s:%s\n",p.getKey(),p.getValue());
+               String pathParamsMessage = String.format(endpointName + " Path Parameters --> \n%s",pathParamLogging);
+               Reporter.log(pathParamsMessage,true);
+           }
+
+       }
+       //request body
+
+       if(reqbody != null){
+
+           String requestBodyLogging = String.format(endpointName + " Request Body --> %s",reqbody);
+           Reporter.log(requestBodyLogging,true);
+
+       }
+
+   }
+
+   public void loggingResponseData(String endpointName,Response response){
+
+        String responseMessage=String.format(endpointName +" Response [%s]--> %s",response.getStatusCode(),response.asString());
+        Reporter.log(responseMessage,true);
+   }
 
 
 
