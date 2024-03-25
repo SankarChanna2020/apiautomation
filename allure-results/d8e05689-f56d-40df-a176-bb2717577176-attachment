@@ -1,0 +1,1 @@
+CreateUser Request Body --> {"id":0.2011601614369053,"username":"apitester","firstName":"api","lastName":"tester","email":"sankar@gmail.com","password":"tester","phone":"9898989898","userStatus":1}

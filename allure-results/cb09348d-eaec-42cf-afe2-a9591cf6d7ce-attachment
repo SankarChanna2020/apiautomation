@@ -1,0 +1,1 @@
+GetUser Response [200]--> {"id":9223372036854758484,"username":"apitester","firstName":"api","lastName":"tester","email":"sankar@gmail.com","password":"tester","phone":"9898989898","userStatus":1}

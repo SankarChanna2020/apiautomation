@@ -3,6 +3,7 @@ package com.apitesting.helpers;
 import com.apitesting.apicontract.ApiEndpoint;
 import com.apitesting.apicontract.HttpMethod;
 import com.apitesting.apicontract.Parameter;
+import io.qameta.allure.Attachment;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.testng.Reporter;
@@ -91,6 +92,8 @@ public class ApiHelper {
         //url formatting
         String urlLogging = String.format("\n" + endpointName +" URL ---> %s %s",httpMethod.toString(),url);
         Reporter.log(urlLogging,true);
+        loggingToAllureReport(urlLogging);
+
 
 
         //header formatting
@@ -103,6 +106,7 @@ public class ApiHelper {
 
             String headerMessage = String.format(endpointName + " Header --> \n%s",headerLogging);
             Reporter.log(headerMessage.substring(0,headerMessage.length()-1),true);
+            loggingToAllureReport(headerMessage);
 
 
         }
@@ -117,6 +121,7 @@ public class ApiHelper {
 
            String queryParamsMessage = String.format(endpointName + " Query Parameters --> \n%s",queryParamLogging);
            Reporter.log(queryParamsMessage.substring(0,queryParamsMessage.length()-1),true);
+           loggingToAllureReport(queryParamsMessage);
 
 
        }
@@ -128,6 +133,7 @@ public class ApiHelper {
                String pathParamLogging = String.format("%s:%s\n",p.getKey(),p.getValue());
                String pathParamsMessage = String.format(endpointName + " Path Parameters --> \n%s",pathParamLogging);
                Reporter.log(pathParamsMessage,true);
+               loggingToAllureReport(pathParamsMessage);
            }
 
        }
@@ -137,6 +143,7 @@ public class ApiHelper {
 
            String requestBodyLogging = String.format(endpointName + " Request Body --> %s",reqbody);
            Reporter.log(requestBodyLogging,true);
+           loggingToAllureReport(requestBodyLogging);
 
        }
 
@@ -146,7 +153,14 @@ public class ApiHelper {
 
         String responseMessage=String.format(endpointName +" Response [%s]--> %s",response.getStatusCode(),response.asString());
         Reporter.log(responseMessage,true);
+        loggingToAllureReport(responseMessage);
    }
+
+    @Attachment(value = "{0}" , type="text/plain")
+    public String loggingToAllureReport(String data){
+        return  data;
+    }
+
 
 
 

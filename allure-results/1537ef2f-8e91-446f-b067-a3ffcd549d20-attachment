@@ -1,0 +1,2 @@
+
+GetUser URL ---> GET https://petstore.swagger.io/v2/user/{username}

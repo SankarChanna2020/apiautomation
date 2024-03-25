@@ -30,16 +30,6 @@ public class UserManagementTests {
 
         Response createUserResponse= umClient.createUser(postReqBody);
 
-
-
-//        Response response=
-//                given().log().all()
-//                .header("Content-Type","application/json")
-//                .body(postReqBody)
-//                .when()
-//                .post("/v2/user")
-//                .then().log().all().extract().response();
-
     }
 
     @Test(dataProviderClass = UserManagementDp.class,dataProvider = "getUserDP")
