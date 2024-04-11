@@ -9,28 +9,27 @@ import io.restassured.http.ContentType;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CreateUserEndpoint implements ApiEndpoint {
+public class UpdateUserEndpoint implements ApiEndpoint {
 
 
     String requestBody;
+    String username;
 
-    String token;
-
-    public CreateUserEndpoint(String requestBody){
+    public UpdateUserEndpoint(String requestBody,String username){
 
         this.requestBody = requestBody;
-//        this.token=token;
+        this.username=username;
 
     }
 
     @Override
     public String url() {
-        return new EndpointConfigReader().getCreateUserURLV2();
+        return new EndpointConfigReader().getUpdateUserURLV2();
     }
 
     @Override
     public HttpMethod httpMethod() {
-        return HttpMethod.POST;
+        return HttpMethod.PUT;
     }
 
     @Override
@@ -44,8 +43,10 @@ public class CreateUserEndpoint implements ApiEndpoint {
     }
 
     @Override
-    public List<Parameter> pathParams() {
-        return null;
+    public List<Parameter> pathParams(){
+        List<Parameter> pathParameters = new ArrayList<>();
+        pathParameters.add(new Parameter("username",username));
+        return pathParameters;
     }
 
     @Override
@@ -54,7 +55,6 @@ public class CreateUserEndpoint implements ApiEndpoint {
         List<Parameter> headers = new ArrayList<>();
         headers.add(new Parameter("Content-Type", ContentType.JSON.toString()));
         headers.add(new Parameter("accept",ContentType.JSON.toString()));
-//        headers.add(new Parameter("Authorization",token));
         return headers;
     }
 }
