@@ -7,6 +7,8 @@ import com.apitesting.dataproviders.UserManagementDp;
 import com.apitesting.endpoints.usermanagement.CreateUserEndpoint;
 import com.apitesting.helpers.ApiHelper;
 import io.restassured.response.Response;
+import org.apache.http.HttpStatus;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -24,11 +26,11 @@ public class UserManagementTests {
     }
 
 
-
     @Test(dataProviderClass = UserManagementDp.class,dataProvider = "createUserDP")
     public void postMethodCreateUserAPI(String postReqBody) throws IOException {
 
         Response createUserResponse= umClient.createUser(postReqBody);
+        Assert.assertEquals(createUserResponse.getStatusCode(),HttpStatus.SC_OK);
 
     }
 
@@ -36,37 +38,25 @@ public class UserManagementTests {
     public void getMethodUserDetails(String userName){
 
         Response getUserResponse= umClient.getUserDetails(userName);
+        Assert.assertEquals(getUserResponse.getStatusCode(),HttpStatus.SC_OK);
 
     }
 
 
+    @Test(dataProviderClass = UserManagementDp.class,dataProvider = "updateUserDP")
+    public void putMethodUpdateUser(String reqbody,String userName) throws IOException {
 
-//    @Test
-    public void deleteMethodUser(){
-
-        given().log().all()
-                .when()
-                .delete("/v2/user/apitester2")
-                .then().log().all()
-                .assertThat().statusCode(200);
+        Response updateUserResponse= umClient.updateUser(reqbody,userName);
+        Assert.assertEquals(updateUserResponse.getStatusCode(),HttpStatus.SC_OK);
 
     }
 
+    @Test(dataProviderClass = UserManagementDp.class,dataProvider = "deleteUserDP")
+    public void deleteMethodUser(String userName){
 
-//    @Test
-    public void putMethodUpdateUser() throws IOException {
+        Response deleteUserResponse= umClient.deleteUser(userName);
+        Assert.assertEquals(deleteUserResponse.getStatusCode(),HttpStatus.SC_OK);
 
 
-//        String putReqBody = file.readFileAsString("/src/main/resources/requestBody/userManagementAPIs/updateUserRequestBody.json");
-
-
-        given().log().all()
-                .header("Content-Type","application/json")
-                .pathParam("userid","apitester")
-                .body("")
-                .when()
-                .put("/v2/user/{userid}")
-                .then().log().all()
-                .assertThat().statusCode(200);
     }
 }

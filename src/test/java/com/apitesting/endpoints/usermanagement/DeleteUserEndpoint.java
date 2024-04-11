@@ -9,33 +9,27 @@ import io.restassured.http.ContentType;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CreateUserEndpoint implements ApiEndpoint {
+public class DeleteUserEndpoint implements ApiEndpoint {
 
+    String username;
 
-    String requestBody;
-
-    String token;
-
-    public CreateUserEndpoint(String requestBody){
-
-        this.requestBody = requestBody;
-//        this.token=token;
-
+    public DeleteUserEndpoint(String username){
+        this.username=username;
     }
 
     @Override
     public String url() {
-        return new EndpointConfigReader().getCreateUserURLV2();
+        return new EndpointConfigReader().getDeleteUserURLV2();
     }
 
     @Override
     public HttpMethod httpMethod() {
-        return HttpMethod.POST;
+        return HttpMethod.DELETE;
     }
 
     @Override
     public String requestBody() {
-        return requestBody;
+        return null;
     }
 
     @Override
@@ -45,16 +39,16 @@ public class CreateUserEndpoint implements ApiEndpoint {
 
     @Override
     public List<Parameter> pathParams() {
-        return null;
+        List<Parameter> pathParameters = new ArrayList<>();
+        pathParameters.add(new Parameter("username",username));
+        return pathParameters;
     }
 
     @Override
     public List<Parameter> headers() {
 
         List<Parameter> headers = new ArrayList<>();
-        headers.add(new Parameter("Content-Type", ContentType.JSON.toString()));
         headers.add(new Parameter("accept",ContentType.JSON.toString()));
-//        headers.add(new Parameter("Authorization",token));
         return headers;
     }
 }

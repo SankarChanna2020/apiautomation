@@ -5,8 +5,8 @@
       "resourcePaths": {
         "createUserV2": "/v2/user",
         "getUserDetailsV2": "/v2/user/{username}",
-        "updateUserV2": "/v2/user/{userid}",
-        "deleteUserV2": "/v2/user/{userid}"
+        "updateUserV2": "/v2/user/{username}",
+        "deleteUserV2": "/v2/user/{username}"
       }
     }
   }

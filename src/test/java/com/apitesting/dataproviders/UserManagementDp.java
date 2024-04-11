@@ -9,7 +9,7 @@ public class UserManagementDp {
     FileUtils file = new FileUtils();
 
     String postReqBody = file.readFileAsString("/src/main/resources/requestBody/userManagementAPIs/createUserRequestBody.json");
-    String updateReqBody = file.readFileAsString("/src/main/resources/requestBody/userManagementAPIs/createUserRequestBody.json");
+    String updateReqBody = file.readFileAsString("/src/main/resources/requestBody/userManagementAPIs/updateUserRequestBody.json");
 
 
     @DataProvider(name="createUserDP")
@@ -38,24 +38,31 @@ public class UserManagementDp {
         };
     }
 
+    @DataProvider(name="deleteUserDP")
+    public Object[][] deleteUserDP(){
 
-//    @DataProvider(name="updateUserDP")
-//    public Object[][] updateUserDP(){
-//
-//        updateReqBody = JsonPath.parse(postReqBody)
-//                .set("$.email","sankar@gmail.com")
-//                .set("$.phone","9898989898")
-//                .jsonString();
-//
-//        return new Object[][] {
-//
-//                {postReqBody}
-//        };
-//
-//
-//
-//        return new Object[0][];
-//    }
+        return new Object[][] {
+
+                {"apitester"},
+                {"apitester2"},
+        };
+    }
+
+
+    @DataProvider(name="updateUserDP")
+    public Object[][] updateUserDP(){
+
+        updateReqBody = JsonPath.parse(updateReqBody)
+                .set("$.email","sankarchanna@gmail.com")
+                .set("$.phone","9898989898")
+                .jsonString();
+
+        return new Object[][] {
+
+                {updateReqBody,"apitester"},
+        };
+
+    }
 
 
 }
